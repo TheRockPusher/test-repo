@@ -4,7 +4,27 @@ version = "0.1.0"
 description = "Python package template with src layout and modern tooling"
 readme = "README.md"
 requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["template", "packaging", "uv", "modern-python", "best-practices"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/username/test-repo"
+Repository = "https://github.com/username/test-repo"
+Documentation = "https://github.com/username/test-repo#readme"
+Issues = "https://github.com/username/test-repo/issues"
 
 [project.scripts]
 test-repo = "test_repo:main"
@@ -97,4 +117,27 @@ convention = "google"
 ]
 "**/__init__.py" = [
     "D104",    # Missing docstring in public package
+]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+parallel = true
+omit = [
+    "*/tests/*",
+    "*/__pycache__/*",
+]
+
+[tool.coverage.report]
+precision = 2
+show_missing = true
+skip_covered = false
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "@abstractmethod",
 ]
