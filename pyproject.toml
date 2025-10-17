@@ -51,6 +51,7 @@ addopts = [
     "--cov=test_repo",
     "--cov-report=term-missing",
     "--cov-fail-under=80",
+    "--cov-report=xml"
 ]
 
 [tool.ruff]
