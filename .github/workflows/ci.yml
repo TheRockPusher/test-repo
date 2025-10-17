@@ -2,9 +2,10 @@ name: CI
 
 on:
   push:
-    branches: ["**"]
+    branches: [master, develop]
   pull_request:
     branches: ["**"]
+  workflow_call:
 
 jobs:
   check:
@@ -32,3 +33,11 @@ jobs:
 
       - name: Run tests
         run: make test
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        if: always()
+        with:
+          files: ./coverage.xml
+          fail_ci_if_error: false
+          token: ${{ secrets.CODECOV_TOKEN }}
