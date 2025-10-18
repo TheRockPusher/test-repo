@@ -1,0 +1,1 @@
+{% if cookiecutter.license == 'MIT' %}{% include '_licenses/MIT.txt' %}{% elif cookiecutter.license == 'GPL-3.0-only' %}{% include '_licenses/GPL-3.0-only.txt' %}{% else %}{% include '_licenses/AGPL-3.0-only.txt' %}{% endif %}

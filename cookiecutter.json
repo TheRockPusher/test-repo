@@ -1,0 +1,18 @@
+{
+  "project_name": "Test Repo",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "package_name": "{{ cookiecutter.project_name }}",
+  "package_slug": "{{ cookiecutter.package_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_description": "Python package template with src layout and modern tooling",
+  "python_version": "3.13",
+  "author_name": "Your Name",
+  "author_email": "your.email@example.com",
+  "license": [
+    "MIT",
+    "GPL-3.0-only",
+    "AGPL-3.0-only"
+  ],
+  "github_username": "username",
+  "github_repository": "{{ cookiecutter.project_slug }}",
+  "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository }}"
+}

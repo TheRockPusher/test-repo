@@ -1,6 +1,6 @@
 """Main test file."""
 
-from test_repo import foo, main
+from {{ cookiecutter.package_slug }} import foo, main
 
 
 def test_foo() -> None:
@@ -12,4 +12,4 @@ def test_main(capsys) -> None:
     """Test main function."""
     main()
     captured = capsys.readouterr()
-    assert "Hello from test-repo!" in captured.out
+    assert "Hello from {{ cookiecutter.project_name }}!" in captured.out
